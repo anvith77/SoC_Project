@@ -1,0 +1,141 @@
+Starting C simulation ...
+E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/bin/vivado_hls.bat C:/Users/anvit/Downloads/Xilinx_temp/Gemm_SoC/solution1/csim.tcl
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Running 'E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/bin/unwrapped/win64.o/vivado_hls.exe'
+            for user 'anvit' on host 'laptop-65srddjm' (Windows NT_amd64 version 6.2) on Tue May 05 19:28:15 +0530 2020
+            in directory 'C:/Users/anvit/Downloads/Xilinx_temp'
+@I [HLS-10] Opening project 'C:/Users/anvit/Downloads/Xilinx/Gemm_SoC'.
+@I [HLS-10] Opening solution 'C:/Users/anvit/Downloads/Xilinx/Gemm_SoC/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Setting target device to 'xc7a200tfbg676-2'
+   Compiling ../../../../matrix_multiply_tb.cpp in debug mode
+   Compiling ../../../../matrix_multiply.cpp in debug mode
+   Generating csim.exe
+In file included from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/floating_point_v6_1_bitacc_cmodel.h:143:0,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls_fpo.h:161,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls_math.h:582,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls/linear_algebra/utils/x_hls_matrix_utils.h:37,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls/linear_algebra/hls_matrix_multiply.h:55,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls_linear_algebra.h:43,
+                 from ../../../../matrix_multiply.h:35,
+                 from ../../../../matrix_multiply_tb.cpp:32:
+E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined [enabled by default]
+E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/floating_point_v6_1_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+In file included from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/floating_point_v6_1_bitacc_cmodel.h:143:0,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls_fpo.h:161,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls_math.h:582,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls/linear_algebra/utils/x_hls_matrix_utils.h:37,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls/linear_algebra/hls_matrix_multiply.h:55,
+                 from E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/hls_linear_algebra.h:43,
+                 from ../../../../matrix_multiply.h:35,
+                 from ../../../../matrix_multiply.cpp:32:
+E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/gmp.h:62:0: warning: "__GMP_LIBGMP_DLL" redefined [enabled by default]
+E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/include/floating_point_v6_1_bitacc_cmodel.h:135:0: note: this is the location of the previous definition
+P = 
+   |(1.0000000000)    (2.0000000000)    (3.0000000000) |
+   |(4.0000000000)    (5.0000000000)    (6.0000000000) |
+   |(7.0000000000)    (8.0000000000)    (9.0000000000) |
+Q = 
+   |(1.0000000000)    (0.0000000000)    (0.0000000000) |
+   |(0.0000000000)    (1.0000000000)    (0.0000000000) |
+   |(0.0000000000)    (0.0000000000)    (1.0000000000) |
+A = 
+   |(1.0000000000)    (2.0000000000)    (3.0000000000) |
+   |(4.0000000000)    (5.0000000000)    (6.0000000000) |
+   |(7.0000000000)    (8.0000000000)    (9.0000000000) |
+
+The above Matrix A = P x Q 
+----------------------------------------------------------------
+Q = 
+   |(1.0000000000)    (0.0000000000)    (0.0000000000) |
+   |(0.0000000000)    (1.0000000000)    (0.0000000000) |
+   |(0.0000000000)    (0.0000000000)    (1.0000000000) |
+R = 
+   |(1.0000000000)    (4.0000000000)    (9.0000000000) |
+   |(2.0000000000)    (5.0000000000)    (8.0000000000) |
+   |(3.0000000000)    (6.0000000000)    (7.0000000000) |
+B = 
+   |(1.0000000000)    (4.0000000000)    (9.0000000000) |
+   |(2.0000000000)    (5.0000000000)    (8.0000000000) |
+   |(3.0000000000)    (6.0000000000)    (7.0000000000) |
+
+ Above Matrix B = Q x R 
+----------------------------------------------------------------
+P = 
+   |(1.0000000000)    (2.0000000000)    (3.0000000000) |
+   |(4.0000000000)    (5.0000000000)    (6.0000000000) |
+   |(7.0000000000)    (8.0000000000)    (9.0000000000) |
+R = 
+   |(1.0000000000)    (4.0000000000)    (9.0000000000) |
+   |(2.0000000000)    (5.0000000000)    (8.0000000000) |
+   |(3.0000000000)    (6.0000000000)    (7.0000000000) |
+C = 
+   | (14.0000000000)     (32.0000000000)     (46.0000000000) |
+   | (32.0000000000)     (77.0000000000)    (118.0000000000) |
+   | (50.0000000000)    (122.0000000000)    (190.0000000000) |
+
+Above matrix C = P x R 
+----------------------------------------------------------------
+A = 
+   |(1.0000000000)    (2.0000000000)    (3.0000000000) |
+   |(4.0000000000)    (5.0000000000)    (6.0000000000) |
+   |(7.0000000000)    (8.0000000000)    (9.0000000000) |
+B = 
+   |(1.0000000000)    (4.0000000000)    (9.0000000000) |
+   |(2.0000000000)    (5.0000000000)    (8.0000000000) |
+   |(3.0000000000)    (6.0000000000)    (7.0000000000) |
+AB = 
+   | (14.0000000000)     (32.0000000000)     (46.0000000000) |
+   | (32.0000000000)     (77.0000000000)    (118.0000000000) |
+   | (50.0000000000)    (122.0000000000)    (190.0000000000) |
+
+The above matrix is AB = A x B 
+----------------------------------------------------------------
+AB = 
+   | (14.0000000000)     (32.0000000000)     (46.0000000000) |
+   | (32.0000000000)     (77.0000000000)    (118.0000000000) |
+   | (50.0000000000)    (122.0000000000)    (190.0000000000) |
+Alpha = 
+   |(10.0000000000)     (0.0000000000)     (0.0000000000) |
+   | (0.0000000000)    (10.0000000000)     (0.0000000000) |
+   | (0.0000000000)     (0.0000000000)    (10.0000000000) |
+AB x alpha = 
+   | (140.0000000000)     (320.0000000000)     (460.0000000000) |
+   | (320.0000000000)     (770.0000000000)    (1180.0000000000) |
+   | (500.0000000000)    (1220.0000000000)    (1900.0000000000) |
+
+The above matrix is AB-alpha = AB x alpha 
+----------------------------------------------------------------
+C = 
+   | (14.0000000000)     (32.0000000000)     (46.0000000000) |
+   | (32.0000000000)     (77.0000000000)    (118.0000000000) |
+   | (50.0000000000)    (122.0000000000)    (190.0000000000) |
+Beta = 
+   |(5.0000000000)    (0.0000000000)    (0.0000000000) |
+   |(0.0000000000)    (5.0000000000)    (0.0000000000) |
+   |(0.0000000000)    (0.0000000000)    (5.0000000000) |
+C x Beta = 
+   | (70.0000000000)    (160.0000000000)    (230.0000000000) |
+   |(160.0000000000)    (385.0000000000)    (590.0000000000) |
+   |(250.0000000000)    (610.0000000000)    (950.0000000000) |
+
+The above matrix is C-beta = C x beta 
+----------------------------------------------------------------
+AB x alpha = 
+   | (140.0000000000)     (320.0000000000)     (460.0000000000) |
+   | (320.0000000000)     (770.0000000000)    (1180.0000000000) |
+   | (500.0000000000)    (1220.0000000000)    (1900.0000000000) |
+C x Beta = 
+   | (70.0000000000)    (160.0000000000)    (230.0000000000) |
+   |(160.0000000000)    (385.0000000000)    (590.0000000000) |
+   |(250.0000000000)    (610.0000000000)    (950.0000000000) |
+Cout = 
+   | (210.0000000000)     (480.0000000000)     (690.0000000000) |
+   | (480.0000000000)    (1155.0000000000)    (1770.0000000000) |
+   | (750.0000000000)    (1830.0000000000)    (2850.0000000000) |
+
+The above matrix is Cout = C-beta + AB-alpha 
+----------------------------------------------------------------
+@I [SIM-1] CSim done with 0 errors.
+@I [LIC-101] Checked in feature [HLS]

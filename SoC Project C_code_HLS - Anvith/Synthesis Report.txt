@@ -1,0 +1,84 @@
+E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/bin/vivado_hls.bat C:/Users/anvit/Downloads/Xilinx_temp/Gemm_SoC/solution1/csynth.tcl
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Running 'E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/bin/unwrapped/win64.o/vivado_hls.exe'
+            for user 'anvit' on host 'laptop-65srddjm' (Windows NT_amd64 version 6.2) on Tue May 05 19:35:35 +0530 2020
+            in directory 'C:/Users/anvit/Downloads/Xilinx_temp'
+@I [HLS-10] Opening project 'C:/Users/anvit/Downloads/Xilinx_temp/Gemm_SoC'.
+@I [HLS-10] Adding design file 'matrix_multiply.cpp' to the project
+@I [HLS-10] Adding test bench file 'matrix_multiply_tb.cpp' to the project
+@I [HLS-10] Opening solution 'C:/Users/anvit/Downloads/Xilinx_temp/Gemm_SoC/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [LIC-101] Checked out feature [HLS]
+@I [HLS-10] Setting target device to 'xc7a200tfbg676-2'
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Analyzing design file 'matrix_multiply.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [XFORM-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+@I [XFORM-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_default<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:183) automatically.
+@I [XFORM-602] Inlining function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' (E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:460) automatically.
+@I [XFORM-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_addition_cout' (matrix_multiply.cpp:251) automatically.
+@I [XFORM-602] Inlining function 'hls::NoTranspose::GetElement<3, 3, float>' into 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' (E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/common/technology/autopilot\hls/linear_algebra/utils/x_hls_matrix_utils.h:99) automatically.
+@I [XFORM-602] Inlining function 'hls::GetMatrixElement<hls::NoTranspose, 3, 3, float>' into 'hls::matrix_multiply_default<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:183) automatically.
+@I [XFORM-602] Inlining function 'hls::matrix_multiply_top<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' into 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' (E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:460) automatically.
+@I [XFORM-602] Inlining function 'hls::matrix_multiply<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, float, float>' into 'matrix_addition_cout' (matrix_multiply.cpp:251) automatically.
+@W [XFORM-631] Renaming function 'hls::matrix_multiply_default<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, 3, 3, hls::matrix_multiply_traits<hls::NoTranspose, hls::NoTranspose, 3, 3, 3, 3, float, float>, float, float>' (E:/Software/Xiilinx2015.2/Vivado_HLS/2015.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:60:72) into matrix_multiply_default.
+@I [HLS-111] Elapsed time: 42.83 seconds; current memory usage: 144 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'matrix_addition_cout' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'matrix_addition_cout_matrix_multiply_default' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.44 seconds; current memory usage: 145 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'matrix_addition_cout_matrix_multiply_default' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.13 seconds; current memory usage: 145 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'matrix_addition_cout' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.088 seconds; current memory usage: 146 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'matrix_addition_cout' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.053 seconds; current memory usage: 146 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'matrix_addition_cout_matrix_multiply_default' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'matrix_addition_cout_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'matrix_addition_cout_fmul_32ns_32ns_32_3_max_dsp': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'matrix_addition_cout_matrix_multiply_default'.
+@I [HLS-111] Elapsed time: 0.113 seconds; current memory usage: 146 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'matrix_addition_cout' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'matrix_addition_cout/CO3' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on port 'matrix_addition_cout/CO4' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on port 'matrix_addition_cout/COUT' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on function 'matrix_addition_cout' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Generating core module 'matrix_addition_cout_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'matrix_addition_cout'.
+@I [HLS-111] Elapsed time: 0.259 seconds; current memory usage: 146 MB.
+@I [RTMG-278] Implementing memory 'matrix_addition_cout_co3_i_ram' using distributed RAMs.
+@I [RTMG-278] Implementing memory 'matrix_addition_cout_C_assign_ram' using distributed RAMs.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'matrix_addition_cout'.
+@I [WVHDL-304] Generating RTL VHDL for 'matrix_addition_cout'.
+@I [WVLOG-307] Generating RTL Verilog for 'matrix_addition_cout'.
+@I [HLS-112] Total elapsed time: 44.761 seconds; peak memory usage: 146 MB.
+@I [LIC-101] Checked in feature [HLS]
