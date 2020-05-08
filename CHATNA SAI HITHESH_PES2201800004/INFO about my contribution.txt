@@ -1,0 +1,5 @@
+By Using Xilinx Vivado HLS 2015.2 , I done basic matrix multiplication code  and I tested it whether I get desired results or not. The synthesis and simulation 
+performed by using Artix -7 board.
+And I check whether the synthesis are matched or not 
+The results are mentioned in following files
+And this is not the final project and we both combine our ideas and we put togther and made final project and this is just my contribution 

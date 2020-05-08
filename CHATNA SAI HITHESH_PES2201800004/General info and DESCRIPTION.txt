@@ -1,0 +1,40 @@
+SOC PROJECT:
+INFO
+PROJECT CODE :01
+GEMM(GENERALISED MATRIX MULTIPLICATION)
+CONTRIBUTED BY CHATNA SAI HITHESH 
+SRN :PES2201800004
+
+
+The main difference between Verilog and C is that the Verilog is a Hardware Description Language while the C is a high level, general-purpose programming language.
+Verilog is a language that helps to design and verify digital circuits. On the other hand, C is a popular general-purpose programming language. It is commonly used to develop system software. In brief, Verilog is based on C.
+Verilog is a Hardware Description Language (HDL) that helps to describe digital systems such as network switches, microprocessors, flip flops etc. Therefore, it is possible to describe the hardware of a digital system using this language.
+Difference Between Verilog and C
+Definition:
+Verilog is a Hardware Description Language (HDL) used to model electronic systems whereas C is a general-purpose programming language that allows structured programming. Thus, this is the main difference between Verilog and C.
+
+File Extensions:
+File extensions is another difference between Verilog and C. Verilog files have .v or.vh file extension whereas C files have .c file extension.
+
+Usage:
+Verilog helps to design and describe digital systems while C helps to build operating systems, databases, compilers, interpreters, network drivers, etc.
+Conclusion:
+The main difference between Verilog and C is that the Verilog is a Hardware Description Language while the C is a high level, general-purpose programming language. In brief, Verilog is based on C.
+C is a high level, general-purpose programming language that supports structured programming. The developer of C language is Dennis Ritchie. It is the foundation for many programming languages such as Python, Java, etc. The programmer can easily understand, C programs but the computer does not understand them. Therefore, the compiler converts the C source code into equivalent machine code. The computer understands this machine code, and it performs the task defined in the program. C programs are executed faster than interpreter-based programming languages such as PHP, Python, etc.
+Some common features of the C language are iterators, decisions, functions, etc. C is used to develop various applications such as operating systems, hardware drivers, compilers, interpreters, etc. Additionally, the language C++ is a subset of C language. It consists of advanced features than C. Moreover, there is an extension of C called Embedded C. It helps to program microcontroller-based applications.
+Now that hardware is designed in high-level languages, the fields of hardware and software development are beginning to merge. Here's an introduction to hardware design in Verilog for the uninitiated.
+C TO VERILOG CONVERTER:
+CBG CtoV - C to Gates HLS Compiler
+The CBG CtoV compiler compiles C code to synthesisable Verilog RTL. The compiler was used for FPGA designs and for ASIC testbenches. It spurred further synthesis research work using the H2 tool and also the Kiwi HLS tools.
+
+Uses:
+1) Perform rapid prototyping and performance analysis in C
+2) Generate synthesisable Verilog from the C
+3) Rapidly repartition a design with different numbers of RAM blocks and processors.
+4) Use multiple threads to describe the design in a natural way.
+Features:
+CtoV is a package that enables hardware to be generated from C. It is based on the TT CY compiler core. For performance analysis and fast system simulation, the C can also be run as software by linking with a threads library. We provide this and a set of standard Tenos C libraries for compiling to hardware.
+
+Compiling C and C++ to hardware is a broad subject that ranges from simple processing that is almost like macro-expansion to complex processing involving a great deal of compile-time manipulation and automatic mapping. CtoV sits at the complex processing end of this spectrum, and, in our view (2000), the industry will take some years before this sort of tool is in widespread use.
+
+CtoV can handle a very large subset of C, but not arbitrary recursive functions. With the current version of CtoV, it is unrealistic to take and use a section of C not written specifically for hardware compilation. However, variables can be updated by more than one thread and fork, join and mutexes are provided, which is a major step forward compared with Verilog.
