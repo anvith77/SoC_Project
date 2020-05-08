@@ -1,0 +1,42 @@
+ Vivado HLS  accelerates design implementation and verification by enabling C, C++, and SystemC specifications to be directly synthesized into VHDL or Verilog RTL, after exploring a multitude of micro-architectures based on design requirements. Functional simulation can be performed in C, providing an order of magnitude acceleration over VHDL or Verilog simulation. This provides designers and system architects with a faster and more robust way of delivering quality designs.
+The keys benefits of Vivado HLS are: • Integrated Eclipse C Development Tool (CDT) environment to specify, compile, simulate, and debug C/C++/SystemC: • C with arbitrary precision specification and simulation • C++ with classes for complex data types and interface models • SystemC for explicit parallelism and multiple clock domains • Algorithm verification speeds up to 100X faster than RTL • Quality of results that rivals hand-coded RTL: • Automatic extraction of parallelism at instruction level and task level • Flexible implementations of floating point algorithms • Architecture-aware inference of DSP48, on-chip memories, and SRL infrastructures • Fast design exploration that creates results in VHDL, Verilog, and SystemC • Micro-architecture exploration that enables easy trade-off of utilization, power, throughput, and latency • Automated RTL verification through co-simulation with original C-based test bench • Plug-and-Play IP generation streamlining integration: • AXI4-based interface synthesis • Comprehensive packaging of RTL results with the Vivado IP packager 
+Overview
+In a high productivity design flow, the primary means of generating the core design IP is through the use of C-based IP and High-Level Synthesis (HLS) of C code into RTL. A C-based IP development flow provides the following benefits:
+•	Superior simulation speeds provided by C verification
+•	Automated generation of accurately timed optimized RTL
+•	Ability to use existing C IP from libraries 
+•	Ease of integrating the resulting RTL IP into a complete system using IP Integrator
+
+The design flow for Vivado HLS is shown in the figure below. The design flow steps are:
+1.	Compile, execute (simulate), and debug the C algorithm.
+Note: In high-level synthesis, running the compiled C program is referred to as C simulation. Executing the C program simulates the function to validate that the algorithm is functionally correct.
+2.	Synthesize the C program into an RTL implementation, optionally using user optimization directives.
+3.	Generate comprehensive reports and analyze the design.
+4.	Verify the RTL implementation using a push button flow.
+5.	Package the RTL implementation into a selection of IP formats.
+C Test Bench
+The top level of every C program is the main() function. Vivado HLS synthesizes any single function below the level of main(). The function to be synthesized by Vivado HLS is referred to as the Design Function. This is highlighted in Figure 4-2.
+•	All functions below the Design Function are synthesized by Vivado HLS.
+By using a self-checking test bench, you are not required to create an RTL test bench to verify that the output from Vivado HLS is correct. The same test bench used for the C simulation is automatically used during C/RTL co-simulation and the post-synthesis results verified by the test bench. 
+There are many ways in C to check that the results are valid. In the above example, the output from the function for synthesis is saved to file result.dat.and compared to a file with the expected results. The results could also be compared to an identical function not marked for synthesis (which executes in software when the test bench runs) or compared to values calculated by the test bench.
+
+Measuring Performance:
+Vivado HLS quickly creates the most optimum implementation based on its own default synthesis behavior and constraints. The clock period is the primary constraint and Vivado HLS uses this along with the target device specifications to determine how many operations can be performed within a clock cycle. 
+After satisfying the clock frequency constraint, the performance metrics used by Vivado HLS, and in order of optimization importance, are:
+•	Initiation Interval (II): This is the number of clock cycles between new inputs. This represents the throughput and how quickly the design reads the next input and processes it.
+•	Latency: This is the number of clock cycles required to generate the output. After the minimum interval has been achieved, or if no internal target has been specified, Vivado HLS seeks to minimize the latency.
+•	Area: After the minimum latency has been achieved, Vivado HLS seeks to minimize the area. 
+The performance metrics are reported for the entire function. For example, if the function has a scalar input, II=3 means the function is processing 1 sample every 3 clock cycles. However, if the function has an input array of N elements, II=N means N elements are processed every N clocks: a rate of one sample per clock. 
+Optimization directives can be used to direct Vivado HLS to create a design which prioritizes the above metrics: for example, force a reduction in area or latency over the throughput. In the absence of any optimization directives, Vivado HLS uses these goals and the default synthesis behavior outlined below to create the initial design.
+Interface Synthesis 
+The arguments to the top-level function are synthesized into data ports with an optional IO protocol. An IO protocol is one or more signals associated with the data port to automatically synchronize data communication between the data port and other hardware blocks in the system. 
+Function Synthesis:
+Functions are synthesized into hierarchical blocks in the final RTL design. Each function in the C code will be represented in the final RTL by a unique block. In general, optimizations stop at function boundaries; some optimization directives have a recursive option or behavior which allows the directive to take effect across function boundaries.
+ 
+RTL Verification
+The RTL verification process within Vivado HLS is fully automated. During RTL/C co-simulation the same C test bench used in C simulation is re-used and the synthesized function is replaced by the RTL design. The sequencing of data, into and out of the RTL design using the correct interface protocols, is performed automatically by Vivado HLS.
+Design Analysis
+Design analysis can be performed using three different techniques. 
+•	The synthesis reports.
+•	The analysis perspective.
+•	RTL simulation waveforms.
